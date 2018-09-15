@@ -15,22 +15,18 @@ var Contact = {
     },
     
     afficherContact: function(){
-        contact.forEach(function(Contact){
-            console.log(Contact.afficher());
-        }
-    )},
-    
-    afficher: function(){
-        var affichage = this.nom.toUpperCase() + this.prenom.toLowerCase();
+        var affichage = "Nom: " + this.nom.toUpperCase() + "Prénom: " + this.prenom;
         return affichage;
     },
-
+    
 // Permet de fermer la fenêtre en cours
     fermerFenetre: function(){
         window.open('','_parent','');
         window.close();
     }
 };
+
+
 
 var contact1 = Object.create(Contact);
 contact1.init("Lévisse", "Carole");
@@ -51,6 +47,9 @@ contact.push(contact2);
 
 switch(choix){
     case "1":
+    contact.forEach(function(Contact){
+        console.log(Contact);
+    });
     Contact.afficherContact();
     break;
     
