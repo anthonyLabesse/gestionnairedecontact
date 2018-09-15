@@ -76,6 +76,8 @@ do{
         Contact.ajouterContact();
         break;
     }
+    default:
+        prompt("Veuillez saisir 1, pour afficher un contact 2, pour ajouter un contact ou 0 pour quitter");
 }while(choix != 0);
 
 
