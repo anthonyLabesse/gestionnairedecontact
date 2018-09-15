@@ -75,9 +75,10 @@ do{
     case "2":
         Contact.ajouterContact();
         break;
-    }
+
     default:
-        prompt("Veuillez saisir 1, pour afficher un contact 2, pour ajouter un contact ou 0 pour quitter");
+        console.log("Veuillez saisir \n 1: pour afficher un contact \n 2: pour ajouter un contact \n 0 pour quitter");
+    }
 }while(choix != 0);
 
 
