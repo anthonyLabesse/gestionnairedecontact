@@ -15,13 +15,12 @@ var Contact = {
     },
     
     afficherContact: function(){
-        var affichage = "Nom: " + this.nom.toUpperCase() + "Prénom: " + this.prenom;
+        var affichage = "Nom: " + this.nom.toUpperCase() + "\t"+ " Prénom: " + this.prenom;
         return affichage;
     },
     
 // Permet de fermer la fenêtre en cours
     fermerFenetre: function(){
-        window.open('','_parent','');
         window.close();
     }
 };
@@ -48,12 +47,12 @@ contact.push(contact2);
 switch(choix){
     case "1":
     contact.forEach(function(Contact){
-        console.log(Contact);
+        console.log(Contact.afficherContact());
     });
-    Contact.afficherContact();
     break;
     
     case "0":
+    console.log("Au revoir");
     Contact.fermerFenetre();
     break;
 }
